@@ -1,0 +1,103 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  overflow-x: hidden;
+}
+
+#logo {
+  font-size: 1.9em;
+  font-weight: 700;
+
+  span {
+    font-weight: 500;
+  }
+  &:hover {
+    color: #5a885a;
+  }
+}
+
+/* Home */
+.jumbotron {
+  height: 600px;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 255, 233);
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* New form */
+.new-form-heading,
+.edit-heading,
+.articles-heading,
+.show-heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-horizontal {
+  width: 1000px !important;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .form-group {
+    width: 750px !important;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Articles index */
+.articles-table {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-container {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-msg-heading {
+  font-size: 1.5rem;
+}
+
+.submitbtn {
+  z-index: 10000;
+}
