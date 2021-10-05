@@ -1,6 +1,8 @@
 <h1 class="show-heading">Title: <%= @article.title%></h1>
 
 <div class="well col-xs-8 col-xs-offset-2 alert alert-secondary">
+  <h4 class="center">Created by:</h4>
+  <p class="center"><%= @article.user.username%></p>
   <h4 class="center"><strong>Description:</strong></h4>
   <p class="center"><%= @article.description%></p>
 </div>
