@@ -4,19 +4,4 @@
   <%= link_to "Create new article", new_article_path, class: 'btn btn-primary btn-create-article'%>
 </div>
 
-<table class="table articles-table">
-  <tr>
-    <th scope="col">Title</th>
-    <th scope="col">Description</th>
-    <th scope="col">Actions</th>
-  </tr>
-  <% @article.each do |article| %>
-    <tr>
-      <td><%=article.title%></td>
-      <td><%=article.description%></td>
-      <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary'%> 
-      <%= link_to 'Show', article_path(article), class: 'btn btn-success'%> 
-      <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'%></td>
-    </tr>
-  <%end%>
-</table>
+<%= render 'article', obj: @article%>
