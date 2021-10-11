@@ -1,0 +1,16 @@
+<h1 class="center m-5">User list</h1>
+
+ <%@users.each do |user|%>
+  <ul class="center">
+    <div class="row w-25">
+      <div class="col-md"></div>
+      <div class="card card-body bg-light col-md">
+        <li class="list-group-item d-flex justify-content-center align-items-center"><%=link_to gravatar_for(user), user_path(user)%></li>
+        <li class="article-title list-group-item d-flex justify-content-center align-items-center"><%=link_to user.username, user_path(user)%></li>
+        <li class="list-group-item d-flex justify-content-center align-items-center"><small><%= pluralize(user.articles.count, "article") if user.articles%></small></li>
+      </div>
+      <div class="col-md"></div>
+    </div>
+  </ul>
+ <%end%>
+
