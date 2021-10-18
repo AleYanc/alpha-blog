@@ -3,5 +3,7 @@
 <div class="btn-container">
   <%= link_to "Create new article", new_article_path, class: 'btn btn-primary btn-create-article'%>
 </div>
-
-<%= render 'article', obj: @article%>
+<div align="center" class="center m-5">
+  <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
+</div>
+<%= render 'article', obj: @articles%>

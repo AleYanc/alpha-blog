@@ -8,9 +8,13 @@
     <tr>
       <td><%=article.title%></td>
       <td><%=article.description%></td>
+      <%if logged_in? && current_user == article.user%>
       <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary'%> 
       <%= link_to 'Show', article_path(article), class: 'btn btn-success'%> 
       <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'%></td>
+      <%else%>
+      <td></td>
+      <%end%>
     </tr>
   <%end%>
 </table>

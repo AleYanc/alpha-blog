@@ -11,8 +11,10 @@
 </div>
 
 <div class="well col-xs-8 col-xs-offset-2 d-flex flex-column justify-content-center align-items-center">
+  <%if logged_in? && current_user = @article.user%>
   <%= link_to 'Edit this article', edit_article_path(@article), class: 'btn btn-primary m-1'%>
   <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'%></td>
+  <%end%>
   <%=link_to 'Go back', articles_path, class: 'btn btn-primary m-1'%>
 </div>
 
